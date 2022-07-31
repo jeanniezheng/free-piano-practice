@@ -1,9 +1,16 @@
-.App {
-  text-align: center;
+/* .App {
+  text-align: right;
+  margin-right: 70px;
+  margin-top: 80px;
+} */
+
+.Music-title-notes {
+  margin-top: 100px;
+
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 60vmin;
   pointer-events: none;
 }
 
@@ -13,7 +20,25 @@
   }
 }
 
-.App-header {
+.Title {
+  text-align: right;
+  margin-right: 200px;
+  font-family: monospace;
+  text-align: center;
+}
+
+.welcome {
+  font-family: Roboto Mono, monospace;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  padding-top: 45px;
+  margin-top: 30px;
+  margin: .6rem 0;
+  letter-spacing: 3px;
+}
+
+/* .App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -22,7 +47,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
+} */
 
 .App-link {
   color: #61dafb;
@@ -32,6 +57,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }

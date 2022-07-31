@@ -1,0 +1,16 @@
+.color-nav {
+    background-color: #729573;
+    /* background-color: #729573; */
+}
+
+.title {
+    color: rgb(148, 22, 22);
+    font-family: courier new;
+    font-size: 1.7rem !important;
+    max-height: 35px;
+
+}
+
+title.hover {
+    background-color: aquamarine !important;
+}
