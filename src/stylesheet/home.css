@@ -1,0 +1,18 @@
+.welcome {
+    font-family: Roboto Mono, monospace !important;
+    font-size: 2rem !important;
+    font-weight: 700 !important;
+    text-align: center;
+    padding-top: 45px;
+    margin-top: 5px;
+    /* margin: .6rem 0; */
+    letter-spacing: 2.5px;
+}
+
+button {
+    text-align: center;
+}
+
+.lesson-one {
+    text-align: center;
+}

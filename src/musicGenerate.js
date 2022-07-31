@@ -79,6 +79,7 @@ function MusicGenerate() {
 
     return (
         <div className="App">
+            <h1>Please Connect Piano</h1>
             <Music
                 notes={notesToEasyScore(state.toPlay)}
                 highlightedNotes={[...Array(state.position).keys()]}

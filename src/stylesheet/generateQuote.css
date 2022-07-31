@@ -1,0 +1,29 @@
+.quote {
+    margin: auto;
+    width: 100%;
+    display: inline-block;
+    max-width: 800px;
+    /* max-height: 50px; */
+    /* padding: 20px; */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: monospace;
+    margin-top: 30px;
+
+}
+
+h1 {
+    align-items: flex-start;
+    font-size: 1.8rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    align-items: center !important;
+}
+
+.author {
+    justify-content: center;
+}
