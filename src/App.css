@@ -1,8 +1,13 @@
-/* .App {
+.App {
   text-align: right;
-  margin-right: 70px;
+  margin-right: 100px;
   margin-top: 80px;
-} */
+}
+
+svg {
+  align-items: right;
+}
+
 * {
   background-color: #f5f7f6;
 }
