@@ -5,7 +5,8 @@ import Home from "./Pages/Home"
 import About from "./Pages/Lesson1";
 import Lesson1 from "./Pages/Lesson1";
 import NavDisplay from "./components/Nav";
-import GenerateQuote from "./components/GenerateQuote";
+import Setup from './Pages/Setup';
+// import GenerateQuote from "./components/GenerateQuote";
 import "./App.css";
 import Profile from './Pages/Profile';
 
@@ -25,6 +26,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/lesson1" element={<Lesson1 />} />
+          <Route path="/setup" element={<Setup />} />
 
         </Routes>
 

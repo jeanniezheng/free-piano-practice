@@ -2,6 +2,8 @@ import React from 'react'
 import Music from "./Music";
 import { useMIDIEvent, MIDI_KEYDOWN, MIDI_KEYUP } from "./midi";
 import { useReducer } from "react";
+import "./stylesheet/musicGenerate.css"
+import "./App.css"
 
 const notesToEasyScore = (notes) =>
     [notes[0] + "/q", ...notes.slice(1)].join(", ");
@@ -78,9 +80,9 @@ function MusicGenerate() {
     });
 
     return (
-        <div className="App">
+        <div >
             <h1>Please Connect Piano</h1>
-            <Music
+            <Music className="staff"
                 notes={notesToEasyScore(state.toPlay)}
                 highlightedNotes={[...Array(state.position).keys()]}
             />

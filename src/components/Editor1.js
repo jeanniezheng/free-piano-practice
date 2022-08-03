@@ -9,7 +9,10 @@ export const Editor1 = () => {
 
         // >
         //     <div />
-        <SplitPane className="Resizer" split="vertical" defaultSize={800} >
+        <SplitPane split="vertical"
+            minSize={50}
+            defaultSize={parseInt(localStorage.getItem('splitPos'), 10)}
+            onChange={(size) => localStorage.setItem('splitPos', size)}>
             <div>
                 <Home />
 

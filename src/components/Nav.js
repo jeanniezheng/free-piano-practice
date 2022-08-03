@@ -8,7 +8,7 @@ import "../stylesheet/nav.css"
 
 function NavDisplay() {
     return (
-        <Navbar className="color-nav justify-content-center" variant="dark" >
+        <Navbar className="color-nav justify-content-center" variant="light" >
             <Navbar.Brand className="title" href="/">FreePianoPractice</Navbar.Brand>
         </Navbar>
     );
