@@ -29,7 +29,7 @@ const GenerateQuote = () => {
             <div className="quote">
                 <h1>"{quotes.text}"</h1>
                 <h2 className="author">-{quotes.author}</h2>
-                <button onClick={getQuote}>get quote</button>
+                {/* <button onClick={getQuote}>get quote</button> */}
             </div>
 
         </div>

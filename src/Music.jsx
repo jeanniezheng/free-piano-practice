@@ -33,7 +33,7 @@ export default function Music({
 
         highlightedNotes.forEach((index) => {
             if (vexNotes[index] != null) {
-                vexNotes[index].setStyle({ strokeStyle: "red", fillStyle: "red" });
+                vexNotes[index].setStyle({ strokeStyle: "green", fillStyle: "green" });
             }
         });
 
