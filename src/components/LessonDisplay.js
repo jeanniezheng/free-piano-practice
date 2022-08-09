@@ -24,7 +24,7 @@ function LessonDisplay() {
                 <div className="button-div">
 
                     <button className='button' onClick={() => {
-                        navigate("/profile")
+                        navigate("/lesson1")
                     }}> <FontAwesomeIcon className="icon" icon={faCoffee} size="lg" /> Lesson 1
                     </button>
 

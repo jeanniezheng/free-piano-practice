@@ -18,8 +18,9 @@ The events will be encoded as:
 }
 */
 
-function reducer(state, action) {
+const reducer = (state, action) => {
     switch (action.type) {
+        //if action.type is action_keydown, then expectedNote = current toPlay[position]
         case ACTION_KEYDOWN:
             console.log("action dispatched:", action);
 
@@ -64,7 +65,8 @@ const generateRandom = () => {
 
 }
 
-function MusicGenerate() {
+const MusicGenerate = () => {
+
     const [state, dispatch] = useReducer(reducer, {
         toPlay: generateRandom(),
         position: 0,

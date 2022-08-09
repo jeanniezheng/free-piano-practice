@@ -9,6 +9,7 @@ import Setup from './Pages/Setup';
 // import GenerateQuote from "./components/GenerateQuote";
 import "./App.css";
 import Profile from './Pages/Profile';
+import { Lesson1 } from './Pages/Lesson1';
 
 
 
@@ -24,7 +25,7 @@ function App() {
         <a href="/"> Go to Home Page</a>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/profile" element={<Profile />} />
+          <Route path="/lesson1" element={<Lesson1 />} />
           <Route path="/lessonDisplay" element={<LessonDisplay />} />
           <Route path="/setup" element={<Setup />} />
 

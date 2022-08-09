@@ -2,37 +2,14 @@ import React from 'react'
 // import { MiddleC } from '..../Images/MiddleC.png'
 const LessonInteractiveComp = ({ title, data, image, index }) => {
     return (
-        // <div>
 
-        //     <p>{data}</p>
-        //     <img src={image} height={300} width={500} alt="MiddleC" />
-
-        //     {/* {data[Index].map(item => {
-        //         <div>
-        //             <p>{ }</p>
-
-        //         </div>
-
-        //     })} */}
-        // </div>
-        <div>
+        <div >
             {data[index].map(item => {
-                return <img src={item.title} height={300} width={500} />
+                return <img className="lesson-img" src={item.title} />
             }
 
             )}
-            {/* <p>{data[0].title}</p> */}
 
-            {/* <p>{data}</p>
-            <img src={image} height={300} width={500} alt="MiddleC" />
-
-            {/* {data[Index].map(item => {
-                <div>
-                    <p>{ }</p>
-
-                </div>
-
-            })} */}
         </div>
     )
 }

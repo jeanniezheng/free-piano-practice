@@ -6,33 +6,35 @@ const LessonInteractive1 = () => {
     const [active, setActive] = useState("Staff")
     console.log(active)
     return (
-        <section className="center">
-            <nav>
-                <button onClick={() => setActive("Staff")}>Staff</button>
-                <button onClick={() => setActive("Treble")}>Treble</button>
-                <button onClick={() => setActive("Bass")}>Bass</button>
+        <section className="centerimg">
+            <nav className="button-container">
+                <button className="button-img" onClick={() => setActive("Staff")}>Staff</button>
+                <button className="button-img" onClick={() => setActive("Treble")}>Treble</button>
+                <button className="button-img" onClick={() => setActive("Bass")}>Bass</button>
+                <button className="button-img" onClick={() => setActive("Grand")}>Grand</button>
+                <button className="button-img" onClick={() => setActive("Middle C")}>Middle C</button>
+                <button className="button-img" onClick={() => setActive("Treble Notes")}>Treble Notes-space</button>
+                <button className="button-img" onClick={() => setActive("Treble Notes-Lines")}>Treble Notes-lines</button>
+
             </nav>
-            {/* 
-            <div>
-                {active === "Staff" && <LessonInteractiveComp data="Staff" image="https://upload.wikimedia.org/wikipedia/commons/2/20/Music-staff.svg" />
-                }
-
-                {active === "Treble" && <LessonInteractiveComp data="Treble" image="https://upload.wikimedia.org/wikipedia/commons/f/fa/Treble_clef.svg" />
-                }
-
-                {active === "Bass" && <LessonInteractiveComp data="Bass" image="https://upload.wikimedia.org/wikipedia/commons/6/61/Bass_clef.svg" />
-                }
-
-            </div> */}
 
             <div>
-                {active === "Staff" && <LessonInteractiveComp data={LessonData1} image="https://upload.wikimedia.org/wikipedia/commons/2/20/Music-staff.svg" index={0} />
+                {active === "Staff" && <LessonInteractiveComp data={LessonData1} index={0} />
                 }
 
-                {active === "Treble" && <LessonInteractiveComp data={LessonData1} image="https://upload.wikimedia.org/wikipedia/commons/f/fa/Treble_clef.svg" index={1} />
+                {active === "Treble" && <LessonInteractiveComp data={LessonData1} index={1} />
                 }
 
-                {active === "Bass" && <LessonInteractiveComp data={LessonData1} image="https://upload.wikimedia.org/wikipedia/commons/6/61/Bass_clef.svg" index={2} />
+                {active === "Bass" && <LessonInteractiveComp data={LessonData1} index={2} />
+                }
+                {active === "Grand" && <LessonInteractiveComp data={LessonData1} index={3} />
+                }
+
+                {active === "Middle C" && <LessonInteractiveComp data={LessonData1} index={4} />
+                }
+                {active === "Treble Notes" && <LessonInteractiveComp data={LessonData1} index={5} />
+                }
+                {active === "Treble Notes-Lines" && <LessonInteractiveComp data={LessonData1} index={6} />
                 }
 
             </div>
