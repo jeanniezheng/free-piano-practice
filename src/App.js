@@ -2,8 +2,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import MusicGenerate from "./musicGenerate";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Home from "./Pages/Home"
-import About from "./Pages/Lesson1";
-import Lesson1 from "./Pages/Lesson1";
+import About from "./components/LessonDisplay";
+import LessonDisplay from "./components/LessonDisplay";
 import NavDisplay from "./components/Nav";
 import Setup from './Pages/Setup';
 // import GenerateQuote from "./components/GenerateQuote";
@@ -25,7 +25,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/profile" element={<Profile />} />
-          <Route path="/lesson1" element={<Lesson1 />} />
+          <Route path="/lessonDisplay" element={<LessonDisplay />} />
           <Route path="/setup" element={<Setup />} />
 
         </Routes>

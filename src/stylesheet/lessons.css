@@ -3,7 +3,7 @@
 }
 
 
-button {
+.button {
     /* background-color: #d20000; */
     /* Green */
     color: white;
@@ -17,7 +17,7 @@ button {
     cursor: pointer;
 }
 
-button {
+.button {
     background-color: #d0d5d2;
     color: black;
     border: 5px solid #83b784;
@@ -35,14 +35,18 @@ button {
 
 }
 
-button:hover .icon {
+.button:hover .icon {
     background-color: #729573;
     color: white;
 }
 
-button:hover {
+.button:hover {
     background-color: #729573;
     color: white;
+}
+
+.center {
+    margin-top: 1.2rem;
 }
 
 

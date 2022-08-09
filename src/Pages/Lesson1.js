@@ -1,53 +1,28 @@
-import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee, faMusic, faFileAudio, faGear } from '@fortawesome/free-solid-svg-icons'
-
-import MusicGenerate from '../musicGenerate'
-import "../stylesheet/lessons.css"
-import Music from '../Music'
-import { useNavigate } from 'react-router-dom'
-
-
-function Lesson1() {
-    let navigate = useNavigate();
-
+import SplitPane from "react-split-pane"
+import "../stylesheet/editor1.css"
+import Home from "./Home"
+import MusicGenerate from "../musicGenerate"
+import LessonReading1 from "./SubPages/LessonReading1"
+import LessonInteractive1 from "./SubPages/LessonInteractive1"
+export const Lesson1 = () => {
     return (
-        <>
-            <section className='center'>
-                <div>
-                    <button onClick={() => {
-                        navigate("/setup")
-                    }}> <FontAwesomeIcon className="icon" icon={faGear} size="lg" /> Setup
-                    </button>
-                </div>
+        // <SplitPane className="Resizer" split="vertical" minSize={100} defaultSize={parseInt(localStorage.getItem('splitPos'), 10)}
+        //     onChange={(size) => localStorage.setItem('splitPos', size)}
 
-                <div className="button-div">
+        // >
+        //     <div />
+        <SplitPane split="vertical"
+            minSize={50}
+            defaultSize={parseInt(localStorage.getItem('splitPos'), 10)}
+            onChange={(size) => localStorage.setItem('splitPos', size)}>
+            <div>
+                <MusicGenerate />
 
-                    <button onClick={() => {
-                        navigate("/profile")
-                    }}> <FontAwesomeIcon className="icon" icon={faCoffee} size="lg" /> Sheet Music
-                    </button>
-
-
-                </div>
-                <div>
-
-                    <button><FontAwesomeIcon className="icon" icon={faMusic} size="lg" />THIS IS LESSON2</button>
-                </div>
-                <div>
-                    <button><FontAwesomeIcon className="icon" icon={faFileAudio} size="lg" />THIS IS LESSON3</button>
-                </div>
-                <div>
-
-                    <button>THIS IS LESSON4</button>
-                </div>
-                {/* <MusicGenerate /> */}
-            </section>
-
-
-        </>
-
+            </div>
+            <div>
+                <LessonInteractive1 />
+            </div>
+        </SplitPane>
+        // </SplitPane>
     )
 }
-
-export default Lesson1
