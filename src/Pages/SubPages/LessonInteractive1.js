@@ -1,10 +1,22 @@
-import React, { useState } from 'react'
+import React, { useState, } from 'react'
 import LessonInteractiveComp from '../LessonComponents/LessonInteractiveComp';
 import LessonData1 from '../Data/LessonData1';
+import { useNavigate } from 'react-router-dom'
+import Button from 'react-bootstrap/Button'
+import Modal from 'react-bootstrap/Modal'
+import LessonQuiz1 from './LessonQuiz1';
+
+
 
 const LessonInteractive1 = () => {
     const [active, setActive] = useState("Staff")
     console.log(active)
+    let navigate = useNavigate()
+
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
     return (
         <section className="centerimg">
             <nav className="button-container">
@@ -38,7 +50,30 @@ const LessonInteractive1 = () => {
                 }
 
             </div>
-            <button className="button" >START QUIZ</button>
+            {/* <button onClick={() => { navigate("/lessonquiz1") }} className="button" >START QUIZ</button> */}
+            <div>
+
+                <Button className="modal-button" variant='second' onClick={handleShow}>
+                    Take Quiz
+                </Button>
+
+                <Modal aria-labelledby="contained-modal-title-vcenter"
+                    centered show={show} onHide={handleClose} animation={true}>
+                    <Modal.Header className="modal-header" closeButton>
+                        Quiz
+                        {/* <Modal.Title className="modal-header">Quiz</Modal.Title> */}
+                    </Modal.Header>
+                    <Modal.Body><LessonQuiz1 /></Modal.Body>
+                    {/* <Modal.Footer>
+                        <Button variant="secondary" onClick={handleClose}>
+                            Close
+                        </Button>
+                        <Button variant="primary" onClick={handleClose}>
+                            Save Changes
+                        </Button>
+                    </Modal.Footer> */}
+                </Modal>
+            </div>
         </section>
     )
 }
