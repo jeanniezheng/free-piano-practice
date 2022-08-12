@@ -1,0 +1,48 @@
+.parent {
+    height: 100%;
+    /* width: 100%; */
+    overflow: hidden;
+}
+
+.lesson-reading-container {
+    margin: 25px 40px;
+    height: 900px;
+    /* width: 100%; */
+    overflow: scroll;
+    padding-right: 20px;
+
+
+
+}
+
+.lesson-reading-container::-webkit-scrollbar {
+    display: none;
+}
+
+.reading-title {
+    font-weight: bold;
+
+
+}
+
+.reading-text {
+    font-size: 25px;
+}
+
+.section {
+    margin-top: 60px;
+}
+
+.piano-note {
+    font-size: 200px;
+    /* display: flex; */
+    /* align-items: center;
+    justify-content: center; */
+
+}
+
+
+/* 
+.scroll {
+    overflow: scroll;
+} */

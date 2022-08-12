@@ -36,6 +36,12 @@ svg {
   text-align: center;
 }
 
+.home-page-button {
+  font-size: 25px;
+  margin-right: 1000px;
+
+  /* text-align: left; */
+}
 
 /* .App-header {
   background-color: #282c34;
