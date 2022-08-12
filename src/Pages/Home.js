@@ -11,7 +11,7 @@ import "../stylesheet/home.css"
 function Home() {
     return (
         <div>
-            <div className="welcome">Welcome to freePianoPractice.com</div>
+            {/* <div className="welcome">Welcome to freePianoPractice.com</div> */}
 
             <GenerateQuote className="quote" />
             <LessonDisplay className="lesson-one" />
