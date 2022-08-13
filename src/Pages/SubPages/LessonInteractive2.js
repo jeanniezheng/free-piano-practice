@@ -27,40 +27,32 @@ const reducer = (state, action) => {
             console.log("expected note:", expectedNote);
             if (expectedNote !== action.key) {
                 console.log("Wrong note!");
-                return state;
+
+                return {
+                    ...state,
+                    fontColor: "Red"
+                };
             }
 
             else {
-                console.log("correct")
                 return {
                     ...state,
+                    fontColor: "Black",
                     toPlay: generateRandom()
+                    // toPlay: setTimeout(generateRandom, 3000)
                 }
+
             }
-
-        // else (state.position + 1 == state.toPlay.length) {
-        //     // if this was the last note
-        //     return {
-        //         ...state,
-        //         toPlay: generateRandom() // TODO: generate the notes randomly
-        //     };
-        // }
-
-        // // otherwise, advance the position
-        // return {
-        //     ...state
-        // };
 
         default:
             throw new Error(`Unknown action type: ${action.type}`);
     }
 }
 
+
 const generateRandom = () => {
     const notes = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
     const num = ["4", "5"]
-
-
 
     const new_note = notes[Math.floor(Math.random() * notes.length)] + num[Math.floor(Math.random() * num.length)];
 
@@ -73,7 +65,8 @@ const generateRandom = () => {
 const LessonInteractive2 = () => {
 
     const [state, dispatch] = useReducer(reducer, {
-        toPlay: 'C4'
+        toPlay: 'C4',
+        fontColor: 'Black'
     });
 
     useMIDIEvent((input, event) => {
@@ -85,13 +78,16 @@ const LessonInteractive2 = () => {
         }
     });
 
+    //have a class name called red. if bahbahbah then red else green
+
     return (
         <section className="parent">
 
             <div className='lesson-reading-container section' >
                 <h1 className="reading-title">Please Connect Piano</h1>
                 <h3>On your keyboard, press the note:</h3>
-                <h2 className="piano-note">{state.toPlay[0]}</h2>
+                <h2 className={`${state.fontColor} piano-note`}> {state.toPlay[0]}</h2>
+                {state.fontColor === "Red" && <h1>Wrong Note, try again</h1>}
                 {/* <Music className="staff"
                 notes={notesToEasyScore(state.toPlay)}
             /> */}

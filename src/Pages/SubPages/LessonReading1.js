@@ -7,7 +7,7 @@ const LessonReading1 = () => {
             <section className="lesson-reading-container">
                 <div className="section">
 
-                    <h1 className="reading-title">Welcome to lesson 1</h1>
+                    <h1 className="reading-main-title">Welcome to lesson 1</h1>
 
                     <p className="reading-text">THE MUSIC ALPHABET
                         Notes are the building blocks for all music. The musical alphabet consists of seven letters: <b>A, B, C, D, E, F, G</b>. Each note has a unique pitch.</p>
@@ -37,7 +37,7 @@ const LessonReading1 = () => {
                 <div className="section">
 
                     <h2 className="reading-title">Bass Clef</h2>
-                    <p className="reading-text"> The bottom staff is usually marked with the bass clef and typically played with the left hand. The bass clef is usually played with the left hand</p>
+                    <p className="reading-text"> The bottom staff is usually marked with the bass clef and typically played with the left hand. The bass clef is for lower-pitched notes and it contains the notes below middle C on the piano</p>
                 </div>
 
 
