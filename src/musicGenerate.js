@@ -10,14 +10,6 @@ const notesToEasyScore = (notes) =>
 
 const ACTION_KEYDOWN = "ACTION_KEYDOWN";
 
-/*
-The events will be encoded as:
-{
-  type: ACTION_KEYDOWN,
-  key: "C4"
-}
-*/
-
 const reducer = (state, action) => {
     switch (action.type) {
         //if action.type is action_keydown, then expectedNote = current toPlay[position]
@@ -28,7 +20,10 @@ const reducer = (state, action) => {
             console.log("expected note:", expectedNote);
             if (expectedNote !== action.key) {
                 console.log("Wrong note!");
-                return state;
+                return {
+                    ...state,
+                    correctNote: false
+                };
             }
 
             if (state.position + 1 == state.toPlay.length) {
@@ -37,6 +32,7 @@ const reducer = (state, action) => {
                     ...state,
                     toPlay: generateRandom(), // TODO: generate the notes randomly
                     position: 0,
+                    correctNote: true
                 };
             }
 
@@ -70,6 +66,7 @@ const MusicGenerate = () => {
     const [state, dispatch] = useReducer(reducer, {
         toPlay: generateRandom(),
         position: 0,
+        correctNote: true
     });
 
     useMIDIEvent((input, event) => {
@@ -82,12 +79,15 @@ const MusicGenerate = () => {
     });
 
     return (
-        <div >
-            <h1>Please Connect Piano</h1>
-            <Music className="staff"
-                notes={notesToEasyScore(state.toPlay)}
-                highlightedNotes={[...Array(state.position).keys()]}
-            />
+        <div className='parent'>
+
+            <div className='lesson-reading-container section'>
+                <h1>On your keyboard, press the note:</h1>
+                <Music className="staff"
+                    notes={notesToEasyScore(state.toPlay)}
+                    highlightedNotes={[...Array(state.position).keys()]}
+                />
+            </div>
         </div>
 
     )

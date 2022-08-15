@@ -6,7 +6,7 @@ import Button from 'react-bootstrap/Button'
 import Modal from 'react-bootstrap/Modal'
 import LessonQuiz1 from './LessonQuiz1';
 
-
+//TODO - Auto generate buttons with data 
 
 const LessonInteractive1 = () => {
     const [active, setActive] = useState("Staff")
@@ -64,14 +64,6 @@ const LessonInteractive1 = () => {
                         {/* <Modal.Title className="modal-header">Quiz</Modal.Title> */}
                     </Modal.Header>
                     <Modal.Body><LessonQuiz1 /></Modal.Body>
-                    {/* <Modal.Footer>
-                        <Button variant="secondary" onClick={handleClose}>
-                            Close
-                        </Button>
-                        <Button variant="primary" onClick={handleClose}>
-                            Save Changes
-                        </Button>
-                    </Modal.Footer> */}
                 </Modal>
             </div>
         </section>

@@ -47,15 +47,6 @@ const LessonReading1 = () => {
                     <p className="reading-text"> When the two staves are joined on the left by a brace, they are collectively called a grand staff.</p>
                 </div>
 
-
-                {/* <div className="section">
-
-                    <h2 className="reading-title">Staff</h2>
-                    <p className="reading-text"> The Staff is a set of five horizontal lines and four spaces that each represent a different musical pitch.
-                        Staff notation is structured around the grand staff</p>
-                </div> */}
-
-
             </section>
         </section>
     )

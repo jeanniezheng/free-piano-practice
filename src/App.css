@@ -43,6 +43,12 @@ svg {
   /* text-align: left; */
 }
 
+.music-score {
+  margin-left: 200px;
+  height: 50px;
+  width: 1000px;
+}
+
 /* .App-header {
   background-color: #282c34;
   min-height: 100vh;

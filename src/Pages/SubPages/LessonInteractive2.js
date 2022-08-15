@@ -4,18 +4,8 @@ import { useMIDIEvent, MIDI_KEYDOWN, MIDI_KEYUP } from "../../midi";
 import { useReducer } from "react";
 
 
-// const notesToEasyScore = (notes) =>
-//     [notes[0] + "/q", ...notes.slice(1)].join(", ");
-
 const ACTION_KEYDOWN = "ACTION_KEYDOWN";
 
-/*
-The events will be encoded as:
-{
-  type: ACTION_KEYDOWN,
-  key: "C4"
-}
-*/
 
 const reducer = (state, action) => {
     switch (action.type) {

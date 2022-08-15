@@ -18,25 +18,14 @@ export const Lesson1 = () => {
 
 
     const handleClick = event => {
-        // 👇️ toggle shown state
         setIsShown(current => !current);
-
-        // 👇️ or simply set it to true
-        // setIsShown(true);
     };
 
 
 
     return (
-        // <SplitPane className="Resizer" split="vertical" minSize={100} defaultSize={parseInt(localStorage.getItem('splitPos'), 10)}
-        //     onChange={(size) => localStorage.setItem('splitPos', size)}
-
-        // >
-        //     <div />
-
         <SplitPane
             className="scroll"
-
             split="vertical"
             minSize={50}
             defaultSize={parseInt(localStorage.getItem('splitPos'), 10)}
@@ -47,13 +36,6 @@ export const Lesson1 = () => {
             </div>
             <div>
                 <LessonInteractive1 />
-
-
-
-                {/* <button onClick={handleClick} className="button" >START QUIZ</button>
-                {isShown && (<LessonQuiz1 />)} */}
-
-
 
             </div>
         </SplitPane>

@@ -11,10 +11,6 @@ const GenerateQuote = () => {
             .then((res) => res.json())
             .then((data) => {
                 let randomNum = Math.floor(Math.random() * data.length);
-                // if (data[randomNum].author == null) {
-                //     let randomNum = Math.floor(Math.random() * data.length);
-
-                // }
                 setQuotes(data[randomNum]);
 
             });

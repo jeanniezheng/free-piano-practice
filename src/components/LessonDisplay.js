@@ -35,14 +35,17 @@ function LessonDisplay() {
                 </div>
 
                 <div>
-                    <button className='button' ><FontAwesomeIcon className="icon" icon={faFileAudio} size="lg" />Lesson 3</button>
+                    <button className='button' onClick={() => {
+                        navigate("/lesson3")
+                    }}> <FontAwesomeIcon className="icon" icon={faFileAudio} size="lg" />Lesson 3</button>
                 </div>
                 <div>
 
-                    <button className='button'>Sheet Music</button>
+                    <button onClick={() => {
+                        navigate("/sheetmusic")
+                    }} className='button'>Sheet Music</button>
                 </div>
-                {/* <MusicGenerate /> */}
-            </section>
+            </section >
 
 
         </>

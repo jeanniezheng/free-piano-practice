@@ -1,5 +1,4 @@
 import React from 'react'
-// import { MiddleC } from '..../Images/MiddleC.png'
 const LessonInteractiveComp = ({ title, data, image, index }) => {
     return (
 

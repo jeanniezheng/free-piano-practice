@@ -17,7 +17,7 @@ const LessonReading2 = () => {
 
                     <p className="reading-text">Middle-C or C4 is very important in understanding music theory and playing almost any instrument. In this lesson, we will identify Middle C and the rest of the musical alphabet on the piano.</p>
                     <h2>Move onto the activity to identify Middle C on your keyboard</h2>
-                    <img src="https://hellomusictheory.com/wp-content/uploads/2019/01/4.2a-1024x214.png.webp" />
+                    {/* <img src="https://hellomusictheory.com/wp-content/uploads/2019/01/4.2a-1024x214.png.webp" /> */}
                 </div>
                 <div className="section">
                     <h1 className="reading-title">Piano Keys</h1>
