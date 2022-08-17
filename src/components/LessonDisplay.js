@@ -1,6 +1,6 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee, faMusic, faFileAudio, faGear } from '@fortawesome/free-solid-svg-icons'
+import { faPlay, faMusic, faFileAudio, faGear } from '@fortawesome/free-solid-svg-icons'
 
 import MusicGenerate from '../musicGenerate'
 import "../stylesheet/lessons.css"
@@ -24,7 +24,7 @@ function LessonDisplay() {
                 <div className="button-div">
                     <button className='button' onClick={() => {
                         navigate("/lesson1")
-                    }}> <FontAwesomeIcon className="icon" icon={faCoffee} size="lg" /> Lesson 1
+                    }}> <FontAwesomeIcon className="icon" icon={faPlay} size="lg" /> Lesson 1
                     </button>
                 </div>
 
