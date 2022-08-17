@@ -82,7 +82,7 @@ const MusicGenerate = () => {
         <div className='parent'>
 
             <div className='lesson-reading-container section'>
-                <h1>On your keyboard, press the note:</h1>
+                <h1>On your Piano, press the note:</h1>
                 <Music className="staff"
                     notes={notesToEasyScore(state.toPlay)}
                     highlightedNotes={[...Array(state.position).keys()]}
