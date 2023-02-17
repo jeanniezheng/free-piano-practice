@@ -76,7 +76,7 @@ const LessonInteractive2 = () => {
             <div className='lesson-reading-container section' >
                 <h1 className="reading-title">Please Connect Piano</h1>
                 <h3>On your keyboard, press the note:</h3>
-                <h2 className={`${state.fontColor} piano-note`}> {state.toPlay[0]}</h2>
+                <h2 className={`${state.fontColor} piano-note`}> {state.toPlay.slice()}</h2>
                 {state.fontColor === "Red" && <h1>Wrong Note, try again</h1>}
                 {/* <Music className="staff"
                 notes={notesToEasyScore(state.toPlay)}

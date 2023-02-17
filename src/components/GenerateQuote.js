@@ -8,6 +8,9 @@ const GenerateQuote = () => {
 
     const getQuote = () => {
         fetch("https://type.fit/api/quotes")
+            // fetch(
+            //     "https://gist.githubusercontent.com"
+            // )
             .then((res) => res.json())
             .then((data) => {
                 let randomNum = Math.floor(Math.random() * data.length);

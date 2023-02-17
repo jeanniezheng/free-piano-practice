@@ -54,11 +54,15 @@ export function midiToEvent(message) {
 
 const notes = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
 
+
+//Which octave it is in "A4" "A5" "A6"
 export function midiToName(midi) {
     const octave = Math.floor(midi / 12 - 1);
     const noteIndex = midi % 12;
     return notes[noteIndex] + octave;
 }
+
+
 
 export function nameToMidi(name) {
     const octave = +name[name.length - 1];
