@@ -2,42 +2,40 @@
     text-align: center;
 }
 
-
 .button {
-    color: white;
+    background-color: #d0d5d2;
+    border: 5px solid #83b784;
+    border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+    box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+    box-sizing: border-box;
+    color: black;
+    cursor: pointer;
+    display: inline-block;
+    font-family: monospace;
+    font-size: 16px;
+    font-size: 25px;
+    height: 90px;
+    margin: 10px 2px;
+    max-width: 800px;
     padding: 16px 32px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 10px 2px;
-    cursor: pointer;
-    background-color: #d0d5d2;
-    color: black;
-    border: 5px solid #83b784;
-    max-width: 800px;
+    transition: all 235ms ease-in-out;
+    user-select: none;
+    -webkit-user-select: none;
     width: 70%;
-    height: 90px;
-    font-family: monospace;
-    font-size: 25px;
 }
 
-.icon {
-    background-color: #d0d5d2;
-    align-items: left;
-    width: 60px;
-
-
-}
-
+.button:hover,
 .button:hover .icon {
     background-color: #729573;
     color: white;
 }
 
-.button:hover {
-    background-color: #729573;
-    color: white;
+.icon {
+    align-items: left;
+    background-color: #d0d5d2;
+    width: 60px;
 }
 
 .centerimg {
@@ -45,21 +43,18 @@
 }
 
 .button-img {
-    margin-bottom: 30px;
-    border-radius: 50%;
-}
-
-
-/* CSS */
-.button-img {
     align-self: center;
     background-color: #fff;
     background-image: none;
     background-position: 0 90%;
     background-repeat: repeat no-repeat;
     background-size: 4px 3px;
-    border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+    border-bottom-left-radius: 15px 255px;
+    border-bottom-right-radius: 225px 15px;
+    border-color: #41403e;
     border-style: solid;
+    border-top-left-radius: 255px 15px;
+    border-top-right-radius: 15px 225px;
     border-width: 2px;
     box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
     box-sizing: border-box;
@@ -69,23 +64,21 @@
     font-family: Neucha, sans-serif;
     font-size: 1rem;
     line-height: 23px;
+    margin-bottom: 30px;
     outline: none;
     padding: .75rem;
     text-decoration: none;
+    touch-action: manipulation;
     transition: all 235ms ease-in-out;
-    border-bottom-left-radius: 15px 255px;
-    border-bottom-right-radius: 225px 15px;
-    border-top-left-radius: 255px 15px;
-    border-top-right-radius: 15px 225px;
     user-select: none;
     -webkit-user-select: none;
-    touch-action: manipulation;
 }
 
 .button-img:hover {
+    background-color: #729573;
+    border-color: #41403e;
     box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
     transform: translate3d(0, 2px, 0);
-    background-color: #729573;
 }
 
 .button-img:focus {
@@ -93,23 +86,22 @@
 }
 
 .lesson-img {
-    width: 70%;
     height: 300px;
-    /* max-width: 500px; */
+    width: 70%;
 }
 
 .modal-button {
-    font-size: 1.4rem;
     background-color: #729573;
-    width: 400px;
-    margin-top: 70px;
+    border-color: #41403e;
     border-style: solid;
     border-width: 2px;
     box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
-    border-color: #41403e;
     color: #fff;
-
+    font-size: 1.4rem;
+    margin-top: 70px;
+    transition: all;
 }
+
 
 .modal-button:hover {
     box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
