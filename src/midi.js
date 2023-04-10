@@ -1,11 +1,15 @@
 import { useEffect } from "react";
 
-export default function useMIDI(callback) {
-    if (!("requestMIDIAccess" in navigator)) {
-        throw "midi unsupported";
-    }
+export const MIDI_UNKNOWN = -1;
+export const MIDI_KEYDOWN = 144;
+export const MIDI_KEYUP = 128;
 
+export function useMIDI(callback) {
     useEffect(() => {
+        if (!("requestMIDIAccess" in navigator)) {
+            throw "midi unsupported";
+        }
+
         const inputs = [];
         let aborted = false;
 
@@ -14,7 +18,7 @@ export default function useMIDI(callback) {
             access.inputs.forEach((input) => {
                 console.log("[MIDI] Subscribing to " + input.name);
                 input.onmidimessage = (message) => {
-                    callback(input, message);
+                    callback(input, midiToEvent(message));
                 };
                 inputs.push(input);
             });
@@ -27,16 +31,12 @@ export default function useMIDI(callback) {
                 input.onmidimessage = false;
             });
         };
-    }, []);
+    }, [callback]);
 }
 
 export function useMIDIEvent(callback) {
     useMIDI((input, message) => callback(input, midiToEvent(message)));
 }
-
-export const MIDI_UNKNOWN = -1;
-export const MIDI_KEYDOWN = 144;
-export const MIDI_KEYUP = 128;
 
 export function midiToEvent(message) {
     if ([MIDI_KEYDOWN, MIDI_KEYUP].indexOf(message.data[0]) < 0) {
@@ -54,15 +54,11 @@ export function midiToEvent(message) {
 
 const notes = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
 
-
-//Which octave it is in "A4" "A5" "A6"
 export function midiToName(midi) {
     const octave = Math.floor(midi / 12 - 1);
     const noteIndex = midi % 12;
     return notes[noteIndex] + octave;
 }
-
-
 
 export function nameToMidi(name) {
     const octave = +name[name.length - 1];
