@@ -15,8 +15,6 @@ const SheetMusic = () => {
             <button className='button' onClick={() => {
                 navigate("/sheetmusic/flymetothemoon")
             }}> Fly Me To The Moon - Frank Sinatra</button>
-
-
         </div>
 
     )
